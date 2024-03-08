@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentSize
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -134,7 +135,11 @@ fun LimonadaComBotaoImagemTexto(
         modifier = Modifier.fillMaxSize()
     )
     {
-        Button(onClick = onImageClick) {
+        Button(onClick = onImageClick,
+            shape = RoundedCornerShape(size = 20.dp),
+            modifier = Modifier
+                .size(240.dp)
+        ) {
             Image(
                 painter = painterResource(id = imageId),
                 contentDescription = stringResource(id = contentDescriptionId)
