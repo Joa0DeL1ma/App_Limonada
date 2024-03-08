@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -48,11 +49,10 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun LimonadaApp() {
     var atual by remember { mutableIntStateOf(1) }
-    Column(
+    Box(
         modifier = Modifier
             .fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally
-
+        //horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
             modifier = Modifier
